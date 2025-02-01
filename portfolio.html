@@ -1,0 +1,410 @@
+<html>
+<head>
+<title> Portfolio </title>
+
+<style>
+
+*{
+margin:0px;
+padding:0px;
+box-sizing:border-box;
+}
+
+.bigBox {
+width:100%;
+height:100vh;
+background-color:darkblue;
+
+}
+
+.bigBox .logo {
+font-size:30px;
+padding:20px;
+color:#ddd;
+}
+
+.bigBox .logo span{
+
+font-size:35px;
+color:crimson;
+}
+
+.bigBox .row-data {
+width:100%;
+height:80px;
+background-color:darkblue;
+display:flex;
+align-items:center;
+justify-content:space-around;
+box-shadow:0px 2px 35px black;
+
+}
+
+.bigBox .row-data ul {
+list-style-type:none;
+display:flex;
+}
+
+.bigBox .row-data ul li {
+padding:10px 35px;
+}
+
+.bigBox .row-data ul li a{
+text-decoration:none;
+font-size:20px;
+color:#fff;
+transition:0.4s ease;
+}
+
+.bigBox .row-data ul li a:hover{
+color:#ff7000;
+}
+
+
+.home-content {
+top:60%;
+left:30%;
+position:absolute;
+transform:translate(-30%,-60%);
+}
+
+.home-content .text {
+font-size:30px;
+color:#fff;
+}
+
+.home-content  h2 {
+font-size:80px;
+color:#ff7000;
+}
+
+.home-content  h2 span {
+text-shadow:3px 1px 8px #ffd777;
+
+}
+
+.home-content h3 {
+font-size:35px;
+color:#ff7000;
+}
+
+.home-content p {
+font-size:20px;
+color:#fff;
+margin-bottom:20px;
+}
+
+
+.home-content button {
+width:120px;
+height:40px;
+border-radius:50px;
+}
+
+.home-content button a {
+text-decoration:none;
+font-size:16px;
+color:blue;
+}
+
+
+.about-content {
+width:100%;
+height:100vh;
+background-color:#f2f2f2;
+padding-top:60px;
+margin-bottom:120px;
+}
+
+.about-content .mini-about {
+width:80%;
+height:500px;
+background-color:#fff;
+margin:auto;
+}
+
+.about-content .mini-about h2 {
+font-size:35px;
+border-bottom:2px solid black;
+text-align:center;
+width:400px;
+margin:auto;
+padding:10px;
+
+}
+
+.about-content .mini-about .left2right {
+display:flex;
+align-items:center;
+justify-content:space-between;
+font-size:18px;
+text-align:justify;
+width:90%;
+}
+
+.about-content .mini-about img {
+width:400px;
+height:400px;
+
+}
+
+
+.about-content button {
+width:150px;
+height:40px;
+margin-left:402px;
+margin-top:-100px;
+border-radius:20px;
+border:2px solid lightgray;
+}
+
+.about-content button a {
+text-decoration:none;
+font-size:19px;
+color:gray;
+}
+
+
+.contact-content {
+width:100%;
+height:100vh;
+background-color:#f0f8ff;
+margin-top:-120px;
+}
+
+.contact-content h2{
+font-size:40px;
+border-bottom:2px solid black;
+width:400px;
+height:60px;
+text-align:center;
+margin:auto;
+margin-bottom:50px;
+}
+
+.contact-content form {
+width:1000px;
+height:40px;
+margin:auto;
+padding:20px;
+}
+
+.contact-content form fieldset {
+padding:20px;
+}
+
+.contact-content form fieldset legend{
+font-size:50px;
+}
+
+.contact-content form fieldset label{
+font-size:20px;
+}
+
+.contact-content form fieldset .text{
+width:300px;
+height:auto;
+border-radius:10px;
+padding:5px;
+border:1px solid black;
+margin-right:40px;
+}
+
+.contact-content form fieldset #email{
+margin-left:42px;
+}
+
+.contact-content form fieldset label .space{
+margin-right:10px;
+margin-left:35px;
+}
+
+.contact-content form fieldset label .dept{
+margin-right:5px;
+margin-left:100px;
+}
+
+.contact-content form fieldset label #text{
+width:300px;
+height:auto;
+border-radius:10px;
+padding:5px;
+}
+
+
+.contact-content form fieldset label textarea{
+width:550px;
+height:150px;
+padding:5px;
+}
+
+.contact-content form button {
+width:150px;
+height:auto;
+padding:5px;
+border-radius:10px;
+border:2px solid gray;
+color:gray;
+font-size:16px;
+cursor:pointer;
+background-color:transparent;
+transition:0.5s ease;
+}
+
+.contact-content form button:hover{
+background-color:lightgray;
+}
+
+.footer {
+width:100%;
+height:400px;
+background-color:darkblue;
+}
+
+.footer p {
+color:#fff;
+font-size:18px;
+}
+
+.footer .company {
+display:flex;
+align-items:center;
+justify-content:space-around;
+}
+
+.footer .company ul {
+list-style-type:none;
+display:block;
+text-align:center;
+}
+
+.footer .company ul h3 {
+font-size:25px;
+color:#fff;
+margin-top:120px;
+
+}
+
+.footer .company ul li {
+padding:10px;
+}
+
+.footer .company ul li a {
+text-decoration:none;
+color:#fff;
+font-size:18px;
+}
+
+.footer .middle {
+color:#fff;
+font-size:18px;
+display:flex;
+}
+
+.footer .middle h3 {
+margin-right:-160px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="bigBox">	
+<div class="row-data">
+<div class="logo">MyPort<span>folio.</span></a></div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#aboutme">About Me</a></li>
+<li><a href="#contact_us">Contact Us</a></li>
+<li><a href="#myPortfolio">My Portfolio</a></li>
+<li><a href="#">Blogs</a></li>
+</ul>
+</div>
+</div>
+
+
+
+<div class="home-content">
+<div class="text">Hello Guys,</div>
+<h2> I'm <span>RJ</span> & <br> I'm a <span>Front-end Developer</span>. </h2>
+<!--  <h3> With the help of HTML,CSS & JS </h3>  -->
+<p> In this website, Only you connect me and some my personal events and webinar and anything, I'll give you in this site. I'm a rarely used smart phones. So, it is not very important when I am not call back you. So, you enter the message and send me in this site.  </p>
+<button id="SmallForm" onclick="formSec()" ><a href="#">Connect Us</a></button>
+</div>
+
+<div class="about-content">
+<div class="mini-about">
+<h2> About Me </h2>
+<div class="left2right">
+<img src="C:\Users\HP\OneDrive\Pictures\Screenshots\1222.png" alt="Not Important Images">
+<p> Hello Guys, <br> I'm Rajkumar Harishchandra and friends calls me "RJ". I'm from Santacruz. I have completed my Diploma in Computer Engineering
+ from Government Polytechnic Mumbai at Bandra-Kherwadi Junction.  My schooling was completed in years of 2019-2020. I'm passouts of 80% marks in SSC Board.
+Then I did, 1 year ITI in Computer Operator & Programming Assistant in short (COPA) Trade from Government Industrial Training Institute of Mulund.   </p>
+</div>
+<button><a href="#"> Know More </a></button>
+</div>
+</div>
+
+
+<div class="contact-content">
+<h2> Connect With Us </h2>
+<form>
+<fieldset> <br><br>
+<legend>Contact Us</legend> 
+<label for="fname" id="demo">First Name : </label>
+<input type="text" class="text" required>
+<label for="mname">Middle Name : </label>
+<input type="text" class="text" required><br><br>
+<label for="lname" >Last Name : </label>
+<input type="text" class="text" required>
+<label for="email" required>Email Id : </label>
+<input type="email" id="email" class="text" required><br></br>
+<label for="gender" class="space">Gender : 
+<input type="radio" class="space" name="person" required>Male
+<input type="radio" class="space" name="person" required>Female
+<label for="department" class="dept" >Select the Category : </label>
+<select status="Department" id="text">
+<option value="null">Select the Option....</option>
+<option value="below10th">below 10th</option>
+<option value="10th">10th(SSC)</option>
+<option value="12th">12th (HSC)</option>
+<option value="diploma">Diploma</option>
+<option value="degree">Degree</option>
+<option value="student">Student</option>
+<option value="other">Other</option>
+</select><br><br>
+<label for="comments" >Comments : </label><br>
+<textarea></textarea><br></br>
+<button onclick="myfunction()"> Submit </button>
+</fieldset>
+</form>
+</div>
+
+
+<div class="footer">
+<div class="company">
+<div class="middle">
+<h3> Ours Supports </h3><br><br>
+<!-- <i class="fa-solid fa-envelope"></i>   -->
+Email Id:- abc07@gmail.com<br>
+Phone no:- +91 4115687453<br>
+Address:- ABC, near xyz, Santacruz east.
+</div>
+<ul>
+<h3> Our Links </h3>
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Contact Us</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Blogs</a></li>
+</ul>
+<p> Copyrights &copy by RRHHINDI.com. All Rights Reserved. <br>| Terms & Conditions  | </p>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>

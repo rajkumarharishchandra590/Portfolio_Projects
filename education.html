@@ -1,160 +1,351 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education Website</title>
-    <script src="https://kit.fontawesome.com/6193760e53.js" crossorigin="anonymous"></script>
+<title> Learn HTML </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+margin:0;
+padding:0;
+}
 
-    <link rel="stylesheet" href="education.css">
+.container {
+width:100%;
+height:100vh;
+background-color:darkblue;
+}
+.container .logo {
+font-size:45px;
+font-weight:bold;
+padding:20px 50px;
+}
 
+.container .logo a {
+text-decoration:none;
+color:#ff7200;
+}
+
+.container .row-data {
+width:100%;
+height:80px;
+background-color:black;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.container .row-data ul {
+list-style-type:none;
+display:flex;
+}
+
+.container .row-data ul li {
+padding:20px 20px;
+}
+
+.container .row-data ul li a {
+text-decoration:none;
+color:#fff;
+font-size:20px;
+transition:0.4s ease-in-out;
+}
+
+.container .row-data ul li a:hover {
+color:#ff7200;
+}
+
+.container .row-data button {
+border:1px solid #fff;
+padding:15px 30px;
+margin-right:30px;
+cursor:pointer;
+background-color:#fff;
+border-radius:20px;
+}
+
+.container .row-data button a {
+text-decoration:none;
+font-size:20px;
+color:#000;
+}
+
+<!-- -------------------------------------------------------------- -->
+.home {
+max-width:1200px;
+}
+
+.home-container {
+top:60%;
+left:30%;
+position:absolute;
+transform:translate(-30%,-60%);
+}
+
+.home-container .small_text {
+font-size:35px;
+font-weight:bold;
+color:#fff;
+}
+
+
+.home-container h2 {
+font-size:70px;
+font-weight:bold;
+margin-left:-25px;
+color:#fff;
+margin-bottom:15px;
+border-left:5px solid #f27700;
+padding-left:15px;
+border-bottom:5px solid crimson;
+}
+
+.home-container p {
+font-size:20px;
+font-family:sans-serif;
+margin-bottom:20px;
+color:#fff;
+} 
+
+.home-container .btn{
+font-size:20px;
+background-color:#000;
+padding:15px;
+border-radius:17px;
+border:none;
+}
+
+.home-container .btn a {
+text-decoration:none;
+color:#fff;
+transition:0.4 ease-in-out;
+}
+
+/* About Section Styling */ 
+
+.about-container {
+width:100%;
+height:100vh;
+background-color:#fff;
+}
+
+.about-container .mini-container {
+width:80%;
+height:600px;
+background-color:whitesmoke;
+margin:auto;
+padding-top:20px;
+margin-top:30px;
+
+}
+
+.about-container .mini-container h2 {
+font-size:36px;
+border-bottom:3px solid #000;
+width:40%;
+height:auto;
+margin:auto;
+transition:0.4s ease-in-out;
+}
+
+.about-container .right {
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.about-container img {
+width:400px;
+height:400px;
+margin-left:40px;
+margin-top:60px;
+padding:40px;
+}
+
+.mini-container .right p {
+text-align:justify;
+margin-right:30px;
+font-family:sans-serif;
+font-size:18px;
+}
+
+.mini-container button {
+border:none;
+font-size:20px;
+float:right;
+right:39%;
+bottom:-85%;
+position:absolute;
+}
+
+.mini-container button a {
+text-decoration:none;
+background-color:#ff7200;
+color:#000;
+padding:15px 20px;
+border-radius:17px;
+color:#fff;
+}
+
+.mini-container button a:hover {
+background-color:#ff7777;
+color:#fff;
+}
+
+/* Courses Section Styling */
+
+.course-container {
+width:100%;
+height:600px;
+background-color:#ddd;
+}
+
+.course-container h2 {
+font-size:40px;
+font-family:sans-serif;
+border-bottom:1px solid #000;
+width:30%;
+height:auto;
+margin:auto;
+padding:20px 10px;
+margin-top:20px;
+margin-bottom:60px;
+}
+
+.course-container .left_right {
+display:flex;
+align-items:center;
+justify-content:sapce-between;
+}
+
+.course-container .column_3 {
+width:289px;
+height:300px;
+padding:30px 10px;
+margin:auto;
+background-color:#ff7200;
+transition:0.4s ease-in-out;
+}
+
+.course-container .column_3:hover {	
+background-color:crimson;
+color:#ff7200;
+}
+
+.course-container p {
+text-align:center;
+font-size:18px;
+margin:20px 0px;
+color:#fff;
+padding:5px 0px;
+font-family:sans-serif;
+transition:0.4s ease;
+}
+
+.course-container p a:hover {
+color:#ff7200;
+}
+
+.course-container p a {
+text-decoration:none;
+color:#fff;
+}
+
+</style>
 
 </head>
+
 <body>
+<div class="container">
+<div class="row-data">
+<div class="logo"><a href="#">RRH</a></div>
+<ul>
+<li><a href="#home" id="home">HOME</a></li>
+<li><a href="#about" id="about">ABOUT ME</a></li>
+<li><a href="#courses" id="courses">COURSES</a></li>
+<li><a href="#contactus" id="contact">CONTACT US</a></li>
+</ul>
+<button><a href="#">Sign Up</a></button>
+</div>
+</div>
 
-    <main>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#home">HOME</i></a></li>
-                    <li><a href="#about">ABOUT US</i></a></li>
-                    <div class="logo">RJ<span>07</span>WEB</div>
-                    <li><a href="#projects">PROJECTS</a></li>
-                    <li><a href="#contact">CONTACT US</a></li>
-                </ul>
-            </nav>
-        </header>
-    </main>
-
-    <section class="home-section">
-        <h3>Hello There!</h3>
-        <h2>I'm Rajkumar & <br> I'm a Coder and <span class="changing-text">Web Developer.</span></h2>
-        <p>In this website, if you want to become a coder, programmer or developer. It means you are right 
-            platform and It is only <mark style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
-            'Open Sans', 'Helvetica Neue', sans-serif; background-color: white; ">Educational purpose</mark> and my <mark style="font-family: system-ui, -apple-system, BlinkMacSystemFont,
-             'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; background-color: #ffffff;">Personal Portfolio</mark>.</p>
-            <button id="btn"><a href="#">Know More</a></button>
-            <button id="btn"><a href="C:\Users\a2z\OneDrive\Desktop\Projects\resume.pdf" target="_blank">Hire Me</a></button>
-    </section>
-    
-
-    <section class="about-section">
-        <section class="mini-section">
-            <h2>ABOUT ME</h2>
-            <section class="left2Images">
-                <img src="C:\Users\a2z\OneDrive\Desktop\Projects\photo2.png" alt="sample">
-                <section class="right2Text">
-                    <h3>I am a Frontend Developer and as well as Core Backend Developer.</h3>
-                    <p>Hello Guys,
-                        I'm Rajkumar Harishchandra and my friends calls me "RJ". I'm from Santacruz. 
-                        I have completed my Diploma in Computer Engineering from Government Polytechnic Mumbai.
-                        My schooling was completed in years of 2019-2020. I'm passouts of 80% marks in SSC Board.
-                        Then I did, 1 year ITI in Computer Operator & Programming Assistant in short (COPA)
-                        Trade from Government Industrial Training Institute of Mulund.</p>
-                        <button><a href="C:\Users\a2z\OneDrive\Desktop\Projects\Intro to graphic design with photoshop.jpg">Know More</a></button>
-                </section>
-            </section>
-        </section>
-    </section>
-
-    <section class="project-section">
-        <section class="mini-projectsection">
-            <h2>My Project</h2>
-            <section class="projectBox">
-                <img src="C:\Users\a2z\OneDrive\Desktop\Projects\bg.jpg" alt="backgroundimage">
-                    <p>In this project, I create a static page for own website with the help of the HTML and CSS.
-                    I created a logo for my website and then I developed various menu option and then larger heading 
-                    and some paragraph tag used in the website.
-                    Lastly, I created a button for action. 
-                    </p>
-                 <button><a href="file:///C:/Users/a2z/OneDrive/Desktop/RRH/Backend%20Pendings.html" target="_blank">Click here</a></button>
-            </section>
-            
-            
-            
-
-            <section class="projectBox">
-                <img src="C:\Users\a2z\OneDrive\Desktop\Projects\2nd project.jpg" alt="backgroundimage">
-                    <p>In this project, I create a static page for own website with the help of the HTML and CSS.
-                    I created a logo for my website and then I developed various menu option and then larger heading 
-                    and some paragraph tag used in the website.
-                    Lastly, I created a button for action. 
-                </p>
-                <button><a href="file:///C:/Users/a2z/OneDrive/Desktop/RRH/portfolio%20(1).html" target="_blank">Click here</a></button>
-            </section>
-        </section>
-    </section>
-
-    <section class="projectBox1">
-        <img src="C:\Users\a2z\OneDrive\Desktop\Projects\3rd.jpg" alt="backgroundimage">
-            <p>In this project, I create a static page for own website with the help of the HTML and CSS.
-            I created a logo for my website and then I developed various menu option and then larger heading 
-            and some paragraph tag used in the website.
-            Lastly, I created a button for action. 
-        </p>
-        <button><a href="file:///C:/Users/a2z/OneDrive/Desktop/RRH/education%20(3).html" target="_blank">Click here</a></button>
-    </section>
-
-<section class="contact-section">
-    <section class="mini-contactsection">
-        <h2> Contact Us</h2>
-        
-        <form>
-            <fieldset>
-                <legend>Connect with Us</legend>
-                <label for="name">First Name:</label>
-                <input type="text" name="text" id="text1" required="fname" placeholder="Enter your first name">
-
-                <label for="name">Last Name:</label>
-                <input type="text" name="text" id="text2" required="lname" placeholder="Enter your last name">
-
-                <label for="name">Nick Name :</label>
-                <input type="text" name="text" id="text3" placeholder="(Optional)">
-
-                <label for="emailId">Email ID:</label>
-                <input type="text" name="text" id="emailId" required="emailId" placeholder="example: abc@gmail.com">
-
-                <label for="Department">Department:</label>
-                <select class="Department">
-                    <option value="Select">Select the Department-----</option>
-                    <option value="IT">Information Technology</option>
-                    <option value="CO">Computer Engineering</option>
-                    <option value="IS">Instrumental Engineering</option>
-                    <option value="CE">Civil Engineering</option>
-                    <option value="Other">Others</option>
-                </select> 
-
-            
-                <textarea class="comment-section" placeholder="Enter your Feedback..."></textarea>
-
-                <button><a href="#">Submit</a></button>
-            </fieldset>
-        </form>
-    </section>
-</section>
+<!-- --------------------------------------------------------  -->
 
 
-<footer class="end">
-    <section class="mini-footer">
-        <Address>Vakola, Neharu Road, Vakola masjid<br> Santacruz-(E), Mumbai</Address>
-        <section class="links">
-            <a href="#">HOME</a>
-            <a href="#">ABOUT US</a>    
-            <a href="#">PROJECTS</a>
-            <a href="#">CONTACT US</a>
-            </section>
+<div class="home">
+<div class="home-container">
+<div class="small_text">Be a</div>
+<h2> Front-End Developer <br> Junior Developer </h2>
+<p> Let's take a look at what lorem ipsum copy is used for, what lorem ipsum means in English, and how you can easily generate this text yourself.
+ What Is Lorem Ipsum? Lorem ipsum is a name for a common type of placeholder text. Also known as filler or dummy text, 
+this is text copy that serves to fill a space without saying anything meaningful. In publishing and graphic design. 
+</p>
+<button class="btn"><a href="#"> Read More </a></button>
 
-        <section class="columns">
-                <section class="social-media">
-                   <a href="https://www.linkedin.com/in/rajkumar-harishchandra/" target="_blank">LinkedIn</a>
-                   <a href="https://www.instagram.com/happ.ylife2227/"  target="_blank">Instagram</a>
-                   <a href="https://github.com/rajkumarharishchandra590"  target="_blank">Github</a>
-                   <a href="https://www.facebook.com/profile.php?id=61556659945226"  target="_blank">Facebook</a>
-                </section>
-        </section>
-    </section>
-</footer>
+</div>
+</div>
+
+<!-- --------------------------------------------------------  -->
+
+
+
+<div class="about-container" id="about">
+<div class="mini-container">
+<h2 style="text-align:center"> ABOUT ME </h2>
+<div class="right">
+<img src="C:\Users\Admin\OneDrive\Pictures\Camera Roll\saphale.jpg" alt="myImage">
+<p> Let's take a look at what lorem ipsum copy is used for, what lorem ipsum means in English, and how you can easily generate this text yourself.
+ What Is Lorem Ipsum? Lorem ipsum is a name for a common type of placeholder text. Also known as filler or dummy text, 
+this is text copy that serves to fill a space without saying anything meaningful. In publishing and graphic design, 
+Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. 
+</p>
+</div>
+<button><a href="#"> KNOW MORE </a></button>
+</div>
+</div>
+
+
+<!--  -------------------------------------------------------- -->
+
+
+<div class="course-container">
+<h2 style="text-align:center"> Learn HTML </h2>
+<div class="left_right">
+<div class="column_3">
+<p><a href="#">WHAT IS THE STAND FOR HTML?</p>
+<p><a href="#">WHAT IS THE HTML?</p>
+<p><a href="#">VERSIONS OF HTML?</p>
+<p><a href="#">WHO DEVELOPED HTML?</p>
+<p><a href="#">HTML SYNTAX</p><br><br>
+</div>
+
+
+<div class="column_3">
+<p><a href="#">INTRO TO HTML?</p>
+<p><a href="#">HTML HEADINGS</p>
+<p><a href="#">HTML PARAGRAPHS</p>
+<p><a href="#">HTML TABLES</p>
+<p><a href="#">HTML COMMENT</p><br><br>
+</div>
+
+<div class="column_3">
+<p><a href="#">HTML TEXT-FORMATTING</p>
+<p><a href="#">HTML STYLE</p>
+<p><a href="#">HTML LINKS</p>
+<p><a href="#">HTML IMAGES</p>
+<p><a href="#">HTML LIST</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<script>
+
+
+</script>
 
 
 
@@ -166,7 +357,20 @@
 
 
 
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </body>
